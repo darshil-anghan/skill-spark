@@ -1,0 +1,401 @@
+@media (max-width: 1024px) {
+  .header-link-btn-block {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .change {
+    background-image: url(/image/header-background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 50px;
+    background-position: right;
+  }
+
+  #menu {
+    display: inline-block;
+    z-index: 101;
+  }
+
+  .header-link-block {
+    display: flex;
+    list-style: none;
+    gap: 21px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-btn-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /*  */
+
+  .hero-section {
+    padding: 100px 0 140px 0;
+  }
+
+  .hero-block {
+    gap: 20px;
+  }
+
+  .hero-subtitle {
+    font-size: 40px;
+  }
+
+  /*  */
+
+  .practice-section {
+    padding: 130px 0 160px 0;
+  }
+
+  .practice-card-block {
+    padding-top: 60px;
+  }
+  .practice-subtitle {
+    font-size: 34px;
+  }
+
+  /*  */
+
+  .course-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .course-link-block {
+    display: flex;
+    justify-content: center;
+  }
+
+  .course-subtitle-block {
+    max-width: 500px;
+  }
+
+  .course-section {
+    padding: 140px 0;
+  }
+  .course-title {
+    font-size: 34px;
+  }
+
+  /*  */
+
+  .product-section {
+    padding: 150px 0;
+  }
+  .product-subtitle {
+    font-size: 34px;
+  }
+  .product-advice-block {
+    padding-bottom: 70px;
+  }
+
+  /*  */
+
+  .feature-section {
+    padding: 140px 0;
+  }
+
+  .feature-subtitle {
+    font-size: 34px;
+  }
+
+  /*  */
+
+  .footer-footer {
+    padding: 130px 0;
+  }
+
+  .footer-link-head {
+    font-size: 22px;
+  }
+
+  .footer-login-block {
+    margin: 70px 0 120px 0;
+  }
+}
+
+@media (max-width: 924px) {
+  .course-inner {
+    gap: 15px;
+  }
+
+  /*  */
+
+  .course-section {
+    padding: 110px 0;
+  }
+  .course-title {
+    font-size: 30px;
+  }
+
+  /*  */
+
+  .product-section {
+    padding: 110px 0;
+  }
+  .product-subtitle {
+    font-size: 30px;
+  }
+
+  /*  */
+
+  .feature-section {
+    padding: 120px 0;
+  }
+
+  .feature-subtitle {
+    font-size: 32px;
+  }
+
+  /*  */
+
+  .footer-footer {
+    padding: 100px 0;
+  }
+
+  .footer-login-block {
+    margin: 40px 0 90px 0;
+  }
+
+  .footer-link {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 724px) {
+  .hero-section {
+    padding: 100px 0 140px 0;
+  }
+
+  .card-inner {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  /*  */
+
+  .practice-section {
+    padding: 100px 0 120px 0;
+  }
+
+  /*  */
+
+  .course-section {
+    padding: 90px 0;
+  }
+  .course-title {
+    font-size: 26px;
+  }
+
+  /*  */
+
+  .product-section {
+    padding: 90px 0;
+  }
+  .product-subtitle {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .product-advice-block {
+    padding-bottom: 50px;
+  }
+  .product-card-inner {
+    gap: 8px;
+  }
+
+  /*  */
+
+  .feature-inner {
+    padding-bottom: 70px;
+  }
+
+  .feature-section {
+    padding: 90px 0;
+  }
+
+  .feature-subtitle {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 110px 0 80px 0;
+  }
+
+  .hero-subtitle {
+    font-size: 32px;
+  }
+
+  /*  */
+
+  .practice-section {
+    padding: 80px 0 90px 0;
+  }
+
+  .practice-card-block {
+    padding-top: 40px;
+  }
+  .practice-subtitle {
+    font-size: 28px;
+  }
+
+  /*  */
+
+  .course-section {
+    padding: 80px 0;
+  }
+  .course-title {
+    font-size: 24px;
+  }
+
+  /*  */
+
+  .product-section {
+    padding: 70px 0;
+  }
+  .product-subtitle {
+    font-size: 26px;
+  }
+  .product-card-inner {
+    gap: 5px;
+  }
+
+  .arrow-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /*  */
+
+  .feature-inner {
+    padding-bottom: 50px;
+  }
+
+  .feature-section {
+    padding: 70px 0;
+  }
+
+  .feature-subtitle {
+    font-size: 28px;
+  }
+
+  /*  */
+
+  .footer-footer {
+    padding: 70px 0;
+  }
+
+  .footer-login-block {
+    margin: 30px 0 70px 0;
+  }
+
+  .footer-link {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-subtitle {
+    font-size: 24px;
+  }
+  .hero-para {
+    font-size: 16px;
+  }
+
+  /*  */
+
+  .practice-section {
+    padding: 50px 0;
+  }
+
+  .practice-card-block {
+    padding-top: 30px;
+  }
+  .practice-subtitle {
+    font-size: 24px;
+  }
+
+  /*  */
+
+  .course-section {
+    padding: 50px 0;
+  }
+  .course-title {
+    font-size: 24px;
+  }
+
+  /*  */
+
+  .product-section {
+    padding: 50px 0;
+  }
+  .product-subtitle {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .product-advice-block {
+    padding-bottom: 30px;
+  }
+
+  .card-title-block {
+    justify-content: start;
+    gap: 30px;
+  }
+
+  /*  */
+
+  .feature-inner {
+    padding-bottom: 40px;
+  }
+
+  .feature-section {
+    padding: 50px 0;
+  }
+
+  .feature-subtitle {
+    font-size: 24px;
+  }
+
+  /*  */
+
+  .footer-footer {
+    padding: 50px 0;
+  }
+
+  .footer-login-block {
+    margin: 30px 0 50px 0;
+  }
+
+  .footer-link-head {
+    font-size: 20px;
+  }
+
+  .footer-link {
+    gap: 5px;
+  }
+}

@@ -1,0 +1,969 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  background: #252b42;
+}
+
+/*  */
+
+/* js */
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+/* .lazy-img {
+  filter: blur(20px);
+} */
+
+img {
+  max-width: 100%;
+}
+/* ////  responsive */
+/* body {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/escheresque_ste.png");
+} */
+
+#menu::before,
+#menu::after {
+  position: absolute;
+  transition: 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+#menu:before {
+  content: "M \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0 \00a0N  ";
+  top: -30px;
+  left: -60%;
+  /* width: 215px; */
+}
+#menu:after {
+  content: "U";
+  top: 30px;
+  left: 75px;
+}
+#menu:hover::before,
+#menu:hover::after {
+  top: -4.3px;
+  opacity: 1;
+  transition: 0.3s ease, opacity 0.17s 0.03s ease-in;
+}
+
+/* // */
+#menu {
+  display: none;
+  position: absolute;
+  right: 10px;
+  left: auto;
+  bottom: auto;
+  top: 35px;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #fff;
+  width: 62px;
+}
+
+.bar {
+  height: 5px;
+  width: 30px;
+  background-color: #fff;
+  display: block;
+  border-radius: 5px;
+  /* transition: 0.3s ease; */
+  transition: transform 0.4s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+.icon #bar1 {
+  transform: translatey(4px) rotate(-45deg);
+}
+.icon #bar3 {
+  transform: translatey(-6px) rotate(45deg);
+}
+.icon #bar2 {
+  opacity: 0;
+}
+
+.header-section {
+  background: transparent;
+  backdrop-filter: blur(15px);
+  z-index: 2;
+}
+
+.hero-section {
+  background-image: url(/image/header-background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  max-width: 100%;
+  width: 100%;
+  background-position: right;
+  transition: all 1s;
+}
+
+.header-inner {
+  position: fixed;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  max-width: 1180px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*  */
+
+/*  */
+
+.header-block {
+  display: flex;
+  /* gap: 76px; */
+  align-items: center;
+  padding: 19px 0 20px 0;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.header-link-btn-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 867px;
+  width: 100%;
+}
+
+.header-link-block {
+  display: flex;
+  list-style: none;
+  gap: 21px;
+}
+
+.header-btn-block {
+  display: flex;
+  align-items: center;
+  gap: 54px;
+}
+
+.header-link-list {
+  transition: 0.5s;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.header-link-list:hover {
+  color: #23a6f0;
+}
+
+.header-login-btn {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 157%;
+}
+
+.header-login-btn:hover {
+  color: #23a6f0;
+  transition: 0.5s ease;
+}
+
+/*  */
+
+.header-member-btn {
+  cursor: pointer;
+  position: relative;
+  padding: 10px 20px;
+  background: #23a6f0;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 157%;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  transition: all 1s;
+  text-decoration: none;
+}
+
+.header-member-btn:after,
+.header-member-btn:before {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  border: 0px solid #fff;
+  transition: all 1s;
+}
+.header-member-btn:after {
+  top: 0px;
+  left: 0px;
+  border-top: 3px solid black;
+}
+
+.header-member-btn:before {
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid black;
+}
+
+.header-member-btn:hover:before,
+.header-member-btn:hover:after {
+  width: 97%;
+}
+
+.header-member-btn:hover {
+  background: #fff;
+  color: #23a6f0;
+}
+
+/*  */
+
+.hero-section {
+  padding: 125px 0 192px 0;
+}
+
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 35px;
+}
+
+.hero-title {
+  color: #23a6f0;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.hero-subtitle-block {
+  max-width: 542px;
+}
+
+.hero-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 138%;
+  color: #ffffff;
+}
+
+.hero-para-block {
+  max-width: 370px;
+}
+
+.hero-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #ffffff;
+}
+
+.hero-btn {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 157%;
+  color: #ffffff;
+  padding: 15px 40px;
+  background: #23a6f0;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  color: #23a6f0;
+  background: #fff;
+  transition: 0.5s ease;
+}
+
+/*  */ /*  */
+
+.practice-section {
+  background: #252b42;
+  padding: 160px 0 193px 0;
+}
+
+.practice-inner {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.practice-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  color: #23a6f0;
+}
+
+.practice-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: #ffffff;
+}
+
+.practice-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #ffffff;
+}
+
+/* card */
+
+.practice-card-block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background: #252b42;
+  padding-top: 80px;
+}
+
+.card-inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 887px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.practice-card {
+  background-color: #fff;
+  padding: 35px 40px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 328px;
+  width: 100%;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #252b42;
+}
+
+.card-divider {
+  border: 2px solid #e74040;
+  max-width: 50px;
+  width: 100%;
+}
+
+.card-para-block {
+  max-width: 136px;
+}
+
+.card-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #737373;
+  text-align: center;
+}
+
+/*  */
+/*  */
+/*  */
+
+.course-section {
+  background: #252b42;
+  padding: 160px 0;
+}
+
+.course-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.course-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 125%;
+  color: #ffffff;
+}
+
+.course-subtitle-block {
+  max-width: 312px;
+}
+
+.course-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  color: #fff;
+}
+
+.course-link-block {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  color: #23a6f0;
+  max-width: 105px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.course-link-block:hover {
+  transition: 0.5s ease;
+  gap: 10px;
+  color: #fff;
+}
+
+.course-link {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+}
+
+/* .link-arrow */
+
+/*  */
+
+.product-section {
+  background: #252b42;
+  padding: 177px 0;
+}
+
+.product-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-advice-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 80px;
+}
+
+.product-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #23a6f0;
+}
+
+.product-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.product-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.product-inner-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+}
+
+.arrow-img {
+  width: 50px;
+  height: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+.product-card-block {
+  display: flex;
+  align-items: center;
+  max-width: 330px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.product-card {
+  max-width: 330px;
+  width: 100%;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.2);
+  transition: transform 1s;
+}
+
+.product-img-block {
+  background-image: url(/image/product-card-img.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-attachment: fixed; */
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 196px;
+  padding: 20px;
+}
+
+.product-img:hover {
+  border: 2px solid #673535;
+  border-radius: 50%;
+}
+
+.product-sale {
+  font-family: "Manrope", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 171%;
+  color: #ffffff;
+  padding: 0 10px;
+  background: #e74040;
+  display: flex;
+  align-self: flex-start;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.product-img-inner {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.product-card-inner {
+  background: #fff;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 330px;
+}
+
+.card-title-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #23a6f0;
+}
+
+.card-rate-block {
+  display: flex;
+  background: #252b42;
+  border-radius: 20px;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+.card-rate {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.product-card-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #252b42;
+}
+
+.product-card-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #737373;
+  max-width: 250px;
+}
+
+.card-sales-block {
+  display: flex;
+  gap: 10px;
+}
+
+.card-sales {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #737373;
+}
+
+.card-price-block {
+  display: flex;
+  padding: 5px 0;
+  gap: 5px;
+}
+
+.reg-price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #bdbdbd;
+}
+
+.card-price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #40bb15;
+}
+
+.card-detail-block {
+  display: flex;
+  padding: 15px 0;
+  gap: 10px;
+}
+
+.card-detail {
+  display: flex;
+  gap: 5px;
+}
+
+.detail-inner {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #737373;
+}
+
+.card-btn-block {
+  max-width: 144px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid #23a6f0;
+  border-radius: 37px;
+  /* gap: 10px; */
+  color: #23a6f0;
+}
+
+.card-btn-block:hover {
+  gap: 10px;
+  color: #fff;
+  background: #23a6f0;
+  transition: 1s ease;
+}
+
+.card-learn {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+/* ///////////////////////////////////////////////// */
+
+.feature-section {
+  background: #252b42;
+  padding: 160px 0;
+}
+
+.feature-inner {
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.feature-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #23a6f0;
+}
+
+.feature-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.feature-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+}
+
+.feature-card-block {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  padding: 25px 70px 30px 70px;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.2);
+}
+
+.feature-rate-block {
+  display: flex;
+  gap: 5px;
+  padding: 2px 0 1px 0;
+}
+
+.feature-card-para-block {
+  max-width: 140px;
+  padding: 30px 0 15px 0;
+}
+
+.feature-card-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #737373;
+}
+
+.feature-author-name {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #252b42;
+  padding: 15px 0 5px 0;
+}
+
+.feature-author-designation {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #737373;
+}
+
+/* ///////////////////////////////////////////// */
+
+.footer-footer {
+  background: #252b42;
+  padding: 160px 0;
+}
+
+.footer-inner-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #23a6f0;
+}
+
+.footer-subtitle {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  text-align: center;
+  color: #ffffff;
+}
+.footer-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.footer-link-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.footer-login-block {
+  background-color: #fff;
+  border-radius: 0px 5px 5px 0px;
+  max-width: 455px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 70px 0 162px 0;
+}
+
+.footer-input {
+  padding: 15px 25px;
+  max-width: 350px;
+  width: 100%;
+  border: none;
+}
+
+.footer-btn {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  background: #23a6f0;
+  border-radius: 0px 5px 5px 0px;
+  padding: 15px 22px 16px 23px;
+  text-decoration: none;
+}
+
+.footer-btn:hover {
+  color: #e6e5e5;
+}
+
+.social-block {
+  display: flex;
+  gap: 20px;
+}
+
+/* .social-img:hover {
+  box-shadow: 0px 0px 15px 6px #fff;
+  padding: 2px;
+  border: 2px solid black;
+  border-radius: 50%;
+} */
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 240px;
+  width: 100%;
+}
+
+.footer-link-head {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #ffffff;
+}
+
+.link-para {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  max-width: 200px;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-link-list {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-link-list:hover {
+  /* text-decoration: underline; */
+  color: #23a6f0;
+  transition: 0.5s ease;
+}
